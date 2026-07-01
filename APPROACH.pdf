@@ -1,0 +1,156 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5287 >>
+stream
+BT
+/F2 18.00 Tf
+50.00 791.89 Td (Approach Document) Tj
+/F2 12.50 Tf
+50.00 757.89 Td (Architecture) Tj
+/F1 9.60 Tf
+50.00 740.89 Td (I built the solution as a stateless FastAPI service with two endpoints: /health for availability) Tj
+/F1 9.60 Tf
+50.00 728.59 Td (checks and /chat for recommendations. The chat endpoint accepts the full message history on every) Tj
+/F1 9.60 Tf
+50.00 716.29 Td (request, so the service does not depend on server-side session memory. The main pipeline is: validate) Tj
+/F1 9.60 Tf
+50.00 703.99 Td (request, detect unsafe or out-of-scope input, decide whether clarification is needed, retrieve) Tj
+/F1 9.60 Tf
+50.00 691.69 Td (candidate SHL assessments, rerank them, and return the response in the required schema.) Tj
+/F1 9.60 Tf
+50.00 675.39 Td (The project is split into small modules: catalog loading and validation, embeddings, vector search,) Tj
+/F1 9.60 Tf
+50.00 663.09 Td (ranking, conversation logic, safety checks, API schemas, scraping, tests, and evaluation. Catalog) Tj
+/F1 9.60 Tf
+50.00 650.79 Td (records are represented with Pydantic models so malformed data is caught early.) Tj
+/F2 12.50 Tf
+50.00 627.49 Td (Retrieval Setup) Tj
+/F1 9.60 Tf
+50.00 610.49 Td (I store SHL assessments as structured JSON with fields such as name, description, skills measured,) Tj
+/F1 9.60 Tf
+50.00 598.19 Td (duration, remote testing, languages, test type, job level, assessment family, and catalog URL. Each) Tj
+/F1 9.60 Tf
+50.00 585.89 Td (record is converted into a searchable text document using its description, skills, metadata, and) Tj
+/F1 9.60 Tf
+50.00 573.59 Td (assessment family.) Tj
+/F1 9.60 Tf
+50.00 557.29 Td (For retrieval, the app supports OpenAI-compatible embeddings and FAISS. I also added a deterministic) Tj
+/F1 9.60 Tf
+50.00 544.99 Td (local embedding fallback so the service can run in development and CI without API keys. The retrieval) Tj
+/F1 9.60 Tf
+50.00 532.69 Td (step first performs semantic search, then applies metadata constraints such as remote testing,) Tj
+/F1 9.60 Tf
+50.00 520.39 Td (duration, and job level where possible.) Tj
+/F2 12.50 Tf
+50.00 497.09 Td (Ranking) Tj
+/F1 9.60 Tf
+50.00 480.09 Td (The ranking layer combines semantic similarity with practical matching signals. I score candidates) Tj
+/F1 9.60 Tf
+50.00 467.79 Td (using skills overlap, job-description overlap, test type relevance, seniority match, duration fit,) Tj
+/F1 9.60 Tf
+50.00 455.49 Td (and remote-testing compatibility. This helps avoid returning a semantically similar assessment that) Tj
+/F1 9.60 Tf
+50.00 443.19 Td (fails an explicit constraint. The API returns between one and ten recommendations, depending on the) Tj
+/F1 9.60 Tf
+50.00 430.89 Td (available matches.) Tj
+/F2 12.50 Tf
+50.00 407.59 Td (Prompt And Conversation Design) Tj
+/F1 9.60 Tf
+50.00 390.59 Td (The assistant is constrained to the loaded SHL catalog. It should not invent assessment names,) Tj
+/F1 9.60 Tf
+50.00 378.29 Td (metadata, or URLs. If the request is too vague, it asks for role, skills, seniority, or time) Tj
+/F1 9.60 Tf
+50.00 365.99 Td (constraints before recommending. It also supports follow-up refinement because the full conversation) Tj
+/F1 9.60 Tf
+50.00 353.69 Td (history is included in each request.) Tj
+/F1 9.60 Tf
+50.00 337.39 Td (For comparisons, the agent compares only catalog-backed fields such as skills measured, duration,) Tj
+/F1 9.60 Tf
+50.00 325.09 Td (test type, family, and job level. For safety, I added explicit refusal handling for prompt injection,) Tj
+/F1 9.60 Tf
+50.00 312.79 Td (system prompt extraction, legal advice, salary advice, general hiring advice, and non-SHL) Tj
+/F1 9.60 Tf
+50.00 300.49 Td (recommendations.) Tj
+/F2 12.50 Tf
+50.00 277.19 Td (Evaluation) Tj
+/F1 9.60 Tf
+50.00 260.19 Td (I added automated tests for /health, /chat schema compliance, clarification, recommendations,) Tj
+/F1 9.60 Tf
+50.00 247.89 Td (comparison, refinement, off-topic refusal, prompt-injection refusal, stateless history, and ranking) Tj
+/F1 9.60 Tf
+50.00 235.59 Td (behavior. I also included an evaluation script that measures Recall@10, precision, average latency,) Tj
+/F1 9.60 Tf
+50.00 223.29 Td (hallucination rate, and conversation capabilities.) Tj
+/F1 9.60 Tf
+50.00 206.99 Td (The main quality measure is whether returned recommendations are relevant and grounded in catalog) Tj
+/F1 9.60 Tf
+50.00 194.69 Td (records. Hallucination rate is checked by verifying that returned URLs come from the loaded catalog.) Tj
+/F1 9.60 Tf
+50.00 182.39 Td (Retrieval quality can be improved by expanding the gold evaluation set with more role-specific test) Tj
+/F1 9.60 Tf
+50.00 170.09 Td (cases.) Tj
+/F2 12.50 Tf
+50.00 146.79 Td (What Did Not Work) Tj
+/F1 9.60 Tf
+50.00 129.79 Td (The main issue was reliable access to the full public SHL catalog during development. Direct fetching) Tj
+/F1 9.60 Tf
+50.00 117.49 Td (can be blocked depending on the environment, so I implemented both a standard BeautifulSoup scraper) Tj
+/F1 9.60 Tf
+50.00 105.19 Td (and a Playwright-based browser mode for JavaScript-rendered or protected pages. I also kept the app) Tj
+/F1 9.60 Tf
+50.00 92.89 Td (runnable with a small seed catalog so the API, tests, and deployment flow can be validated before) Tj
+/F1 9.60 Tf
+50.00 80.59 Td (refreshing the complete catalog.) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 450 >>
+stream
+BT
+/F2 12.50 Tf
+50.00 791.89 Td (AI Tools Used) Tj
+/F1 9.60 Tf
+50.00 774.89 Td (I used AI assistance for scaffolding, code review, and documentation drafting, then reviewed and) Tj
+/F1 9.60 Tf
+50.00 762.59 Td (organized the implementation around the assignment requirements. The recommendation logic itself is) Tj
+/F1 9.60 Tf
+50.00 750.29 Td (grounded in the local SHL catalog data and does not rely on the model inventing assessments or URLs.) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000272 00000 n 
+0000005611 00000 n 
+0000005753 00000 n 
+0000006254 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6396
+%%EOF

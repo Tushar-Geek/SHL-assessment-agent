@@ -1,0 +1,249 @@
+[
+  {
+    "name": "Verify Interactive - Numerical Reasoning",
+    "description": "Interactive numerical reasoning assessment for interpreting data, tables, charts, and workplace numerical information.",
+    "skills_measured": [
+      "Numerical reasoning",
+      "Data interpretation",
+      "Problem solving"
+    ],
+    "duration": 18,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Cognitive Ability",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Verify Interactive",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Verify Interactive - Deductive Reasoning",
+    "description": "Interactive deductive reasoning assessment for evaluating logical rules, arguments, and conclusions.",
+    "skills_measured": [
+      "Deductive reasoning",
+      "Logical reasoning",
+      "Problem solving"
+    ],
+    "duration": 18,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Cognitive Ability",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Verify Interactive",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Verify Interactive - Inductive Reasoning",
+    "description": "Interactive inductive reasoning assessment for identifying patterns and applying abstract rules to new information.",
+    "skills_measured": [
+      "Inductive reasoning",
+      "Pattern recognition",
+      "Abstract reasoning"
+    ],
+    "duration": 18,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Cognitive Ability",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Verify Interactive",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Occupational Personality Questionnaire OPQ",
+    "description": "Personality questionnaire used to understand workplace behavioral preferences and role fit.",
+    "skills_measured": [
+      "Personality",
+      "Work style",
+      "Behavioral preferences",
+      "Leadership potential"
+    ],
+    "duration": 25,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Personality and Behavior",
+    "job_level": [
+      "Professional",
+      "Manager",
+      "Leader"
+    ],
+    "assessment_family": "OPQ",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Motivation Questionnaire MQ",
+    "description": "Questionnaire for understanding workplace motivators, drivers, and environmental fit.",
+    "skills_measured": [
+      "Motivation",
+      "Work drivers",
+      "Culture fit"
+    ],
+    "duration": 25,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Personality and Behavior",
+    "job_level": [
+      "Entry",
+      "Graduate",
+      "Professional",
+      "Manager"
+    ],
+    "assessment_family": "Motivation",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Python Coding Assessment",
+    "description": "Programming assessment for evaluating Python coding ability, debugging, and practical problem solving.",
+    "skills_measured": [
+      "Python",
+      "Coding",
+      "Debugging",
+      "Software development"
+    ],
+    "duration": 40,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Knowledge and Skills",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Coding",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Java Coding Assessment",
+    "description": "Programming assessment for evaluating Java coding, object-oriented programming, and debugging skills.",
+    "skills_measured": [
+      "Java",
+      "Coding",
+      "Object-oriented programming",
+      "Debugging"
+    ],
+    "duration": 40,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Knowledge and Skills",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Coding",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "SQL Skills Assessment",
+    "description": "Technical skills assessment for querying relational databases and interpreting SQL results.",
+    "skills_measured": [
+      "SQL",
+      "Databases",
+      "Data analysis"
+    ],
+    "duration": 35,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Knowledge and Skills",
+    "job_level": [
+      "Graduate",
+      "Professional"
+    ],
+    "assessment_family": "Technology Skills",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Sales Achievement Predictor",
+    "description": "Assessment for sales roles covering sales behaviors, customer focus, and achievement orientation.",
+    "skills_measured": [
+      "Sales",
+      "Customer focus",
+      "Achievement",
+      "Influence"
+    ],
+    "duration": 35,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Job Focused Assessment",
+    "job_level": [
+      "Entry",
+      "Professional"
+    ],
+    "assessment_family": "Sales",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  },
+  {
+    "name": "Customer Service Assessment",
+    "description": "Assessment for customer-facing roles measuring service orientation, communication, and problem solving.",
+    "skills_measured": [
+      "Customer service",
+      "Communication",
+      "Problem solving"
+    ],
+    "duration": 30,
+    "remote_testing": true,
+    "languages": [
+      "English"
+    ],
+    "test_type": "Job Focused Assessment",
+    "job_level": [
+      "Entry",
+      "Professional"
+    ],
+    "assessment_family": "Customer Service",
+    "catalog_url": "https://www.shl.com/solutions/products/product-catalog/",
+    "structured_metadata": {
+      "source": "seed catalog for local development; refresh with scripts/scrape_catalog.py"
+    }
+  }
+]

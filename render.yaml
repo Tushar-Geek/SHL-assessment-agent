@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: shl-assessment-agent
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: USE_LLM
+        value: "false"
+      - key: TOP_K
+        value: "10"
+      - key: CATALOG_PATH
+        value: data/catalog.json
+      - key: INDEX_DIR
+        value: data/index
